@@ -156,7 +156,7 @@ function revealTile(event) {
 
     // Check if the tile has already been revealed
     if (gameData.revealed.includes(index)) {
-        alert("This tile has already been revealed!");
+       // alert("This tile has already been revealed!");
         return;
     }
 
@@ -164,7 +164,7 @@ function revealTile(event) {
     if (gameData.mines.includes(index)) {
         console.log("Mine hit at index:", index); // Debug log
         event.target.style.backgroundImage = "url('bomb.png')";
-        alert('Game Over! You hit a mine!');
+      //  alert('Game Over! You hit a mine!');
         revealAllMines(); // Reveal all the mines
         disableBoard();   // Disable the board after losing
         enableRestartButton(); // Enable restart button
@@ -205,7 +205,7 @@ function cashOut() {
     let multiplier = bettingMultipliers[gameData.hitCount] || 0; // Get multiplier based on hits
     let payout = (gameData.currentBet * multiplier) + gameData.creditGain;
 
-    alert(`You cashed out with ${payout.toFixed(2)} credits!`);
+    // alert(`You cashed out with ${payout.toFixed(2)} credits!`);
     gameData.credits += payout;
     gameData.creditGain = 0;
     gameData.hitCount = 0;
