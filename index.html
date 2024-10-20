@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mines Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Mines Game</h1>
+      <button id="reset-btn">Reset</button>
+    </div>
+    <div class="info">
+  <p>Credits: <span id="credits">1000</span></p>
+  <p>Current Bet: <span id="current-bet">0</span></p>
+  <p>Credit Gain: <span id="credit-gain">0</span></p>
+  <p>Hits: <span id="hit-count">0</span></p>
+  <p>Current Multiplier: <span id="current-multiplier">1.0</span></p>
+  <p>Next Multiplier: <span id="next-multiplier">1.13</span></p>
+</div>
+    <div class="bet-options">
+      <input type="number" id="bet-amount" min="1" max="1000" placeholder="Enter bet amount" />
+      <div class="bomb-options">
+        <label for="bomb-count">Select Bomb Count:</label>
+        <select id="bomb-count">
+         <!-- <option value="1">1 Bomb</option> -->
+         <!-- <option value="2">2 Bombs</option> --> 
+         <!-- <option value="3">3 Bombs</option> -->
+          <option value="4">4 Bombs</option>
+        </select>
+      </div>
+      <button id="set-bet-btn">Set Bet</button>
+    </div>
+    <div class="cashout-status">
+      <p>Cashout Status: <span id="cashout-credits">0.00</span> credits</p>
+    </div>
+    <div id="game-board" class="game-board"></div>
+    <div class="controls">
+      <button id="cashout-btn">Cash Out</button>
+      <button id="restart-btn">Restart</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

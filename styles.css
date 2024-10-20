@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(44, 62, 80, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#reset-btn {
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-btn:hover {
+    background-color: #c0392b;
+}
+
+.info {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.bet-options {
+    margin-bottom: 15px;
+}
+
+.bet-options input,
+.bomb-options select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 6px);
+}
+
+.bomb-options {
+    margin-top: 10px;
+}
+
+#set-bet-btn {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#set-bet-btn:hover {
+    background-color: #2980b9;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.tile {
+    width: 70px;
+    height: 70px;
+    background-color: #34495e;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tile.safe {
+    background-color: #27ae60;
+    background-image: url('coin.png');
+    background-size: cover;
+}
+
+.tile.mine {
+    background-color: #c0392b;
+    background-image: url('bomb.png');
+    background-size: cover;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cashout-btn,
+#restart-btn {
+    padding: 10px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(48% - 5px);
+}
+
+#cashout-btn:hover {
+    background-color: #27ae60;
+}
+
+#restart-btn:hover {
+    background-color: #27ae60;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.cashout-status {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #27ae60; /* Green color for positive status */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .tile {
+        width: 50px;
+        height: 50px;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2px;
+    }
+}
