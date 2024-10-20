@@ -162,9 +162,9 @@ function revealTile(event) {
 
     // Check for mine
     if (gameData.mines.includes(index)) {
-        console.log("Mine hit at index:", index); // Debug log
+      //  console.log("Mine hit at index:", index); // Debug log
         event.target.style.backgroundImage = "url('bomb.png')";
-      //  alert('Game Over! You hit a mine!');
+      // alert('Game Over! You hit a mine!');
         revealAllMines(); // Reveal all the mines
         disableBoard();   // Disable the board after losing
         enableRestartButton(); // Enable restart button
